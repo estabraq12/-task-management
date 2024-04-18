@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 class="text-center"> Add new task </h2>
+  <ul class="list-group">
+  <li class="list-group-item">
+
+
+<input #taskT type="text" class="form-control" placeholder="please enter the title">
+<input #dueD type="text" class="form-control" placeholder="please enter due date of your task">
+<textarea #taskD class="form-control" placeholder="please enter descreption"></textarea>
+
+</li>
+</ul>
+<button class="btn btn-success" (click)=" st(taskT,taskD,dueD)">
+  Save
+</button>
+<a class="btn btn-primary" routerLink="/">Cancel</a>
+</div>

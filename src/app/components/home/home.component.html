@@ -1,0 +1,39 @@
+<div class="container">
+  <blockquote class="blockquote text-center">
+<p>
+  This is your tasks for today
+</p>
+  </blockquote>
+<div *ngIf="taskservice.tasks.length==0">
+<p>
+  NO TASKS FOUND.
+</p>
+</div>
+<div *ngIf="taskservice.tasks.length !=0">
+  <ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of taskservice.tasks; index as i">
+    <a [routerLink]="['/task',i]">
+      {{task.title}}
+    </a>
+
+    <button class="del_button " (click)="ds(i)">
+      Remove
+    </button>
+    <input type="checkbox" class="custom-control-input left-button"  [(ngModel)]="task.isChecked" (change)="saveState(task.isChecked, i)" />
+
+  </li>
+  </ul>
+  </div>
+  <div>
+    <a routerLink="/add-task" class="add-task-btn btn btn-primary">
+      Add Task
+    </a>
+  </div>
+  <div class="author-box fade-in-box">
+    <div class="container">
+    <p>
+      Task manegment assaignment
+    </p>
+  </div>
+  </div>
+</div>

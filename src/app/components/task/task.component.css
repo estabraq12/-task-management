@@ -1,0 +1,18 @@
+li:nth-child(odd)
+{
+background-color: rgb(215, 250, 235);
+border-left: 6px solid navy;
+}
+li:nth-child(even)
+{ background-color: rgb(135, 179, 222);
+  border-left: 6px solid rgb(89, 85, 211);
+
+}
+.button2{
+  float: right;
+  margin-top: 20px;
+}
+.btn3{
+  margin-top: 20px;
+  margin-left: 20px;
+}

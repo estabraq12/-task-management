@@ -1,0 +1,25 @@
+<div class="container">
+<div *ngIf="!taskid">
+<p class="alert alert-danger">
+There is no task
+</p>
+</div>
+<div *ngIf= "taskid">
+  <h2 class="text-center">
+    Details of {{task.title}}
+  </h2>
+<ul class="list-group">
+  <li class="list-group-item">
+
+<input type="text" class="form-control" placeholder="task title" [(ngModel)]="task.title">
+<input type="text" class="form-control" placeholder="task due date" [(ngModel)]="task.due_date">
+<textarea class="form-control" placeholder="Write the descreption of your task" [(ngModel)]="task.descreption"> </textarea>
+</li>
+</ul>
+<button class="btn btn-primary btn3" (click)="ut()">Update</button>
+<button class=" btn btn-danger btn3" (click)="ds()">Delete</button>
+<a class="btn btn-info button2" routerLink="/">Cancel</a>
+
+  </div>
+
+</div>
